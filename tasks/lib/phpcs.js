@@ -21,10 +21,11 @@ exports.init = function(grunt) {
             debug: false,
             extensions: false,
             ignore: false,
+            reportFile: false,
             severity: false,
+            warningSeverity: false,
             standard: false,
-            verbose: false,
-            reportFile: false
+            verbose: false
         },
         cmd    = null,
         done   = null,
@@ -58,7 +59,7 @@ exports.init = function(grunt) {
             // The minimum severity required to display an error or warning
             cmd += ' --severity=' + config.severity;
         }
-        
+
         if (grunt.option('warning-severity') || config.warningSeverity) {
             // The minimum severity required to display an error or warning
             cmd += ' --warning-severity=' + config.warningSeverity;
@@ -78,6 +79,7 @@ exports.init = function(grunt) {
             // Output more verbose information.
             cmd += ' -v';
         }
+
         return cmd;
     };
 
