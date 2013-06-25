@@ -21,6 +21,7 @@ exports.init = function(grunt) {
             debug: false,
             extensions: false,
             ignore: false,
+            reportType: false,
             reportFile: false,
             severity: false,
             warningSeverity: false,
@@ -68,6 +69,12 @@ exports.init = function(grunt) {
         if (grunt.option('standard') || config.standard) {
             // Define the code sniffer standard.
             cmd += ' --standard=' + config.standard;
+        }
+
+        if (grunt.option('report') || config.reportType) {
+            // Set the type of report to output
+            var reportType = grunt.option('report')? grunt.option('report'): config.reportType;
+            cmd += ' --report=' + reportType;
         }
 
         if (grunt.option('report-file') || config.reportFile) {
