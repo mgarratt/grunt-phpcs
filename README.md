@@ -67,10 +67,26 @@ Type: `String` Default: `false`
 
 A comma separated list of patterns to ignore files and directories. This option can also be set by running the task with `--ignore=<ignore>`.
 
+####reportType
+Type: `string` Default: `false`
+
+Type of report output: "full", "xml", "checkstyle", "csv", "emacs", "source", "summary", "svnblame" or "gitblame"
+(the "full" report is printed by default)
+
+####reportFile
+Type: `string` Default: `false`
+
+Log report to the file. This option can also be set by running the task with `--report-file`.
+
 ####severity
 Type: `Integer` Default: `false`
 
 The minimum severity required to display an error or warning. This option can also be set by running the task with `--severity=<severity>`.
+
+####warningSeverity
+Type: `Integer` Default: `false`
+
+The minimum severity required to display awarning. This option can also be set by running the task with `--severity-warning=<severity>`.
 
 ####standard
 Type: `String`  Default: `false`
@@ -80,8 +96,3 @@ Define the standard to use. This option can also be set by running the task with
 Type: `Boolean` Default: `false`
 
 Output more verbose information. This option can also be set by running the task with `--verbose`.
-
-####reportFile
-Type: `string` Default: `false`
-
-Log report to the file. This option can also be set by running the task with `--report-file`.
