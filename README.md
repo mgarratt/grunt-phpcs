@@ -52,11 +52,6 @@ The file or directory where phpcs should search for files.
 ####bin
 Type: `String`  Default: `'phpcs'`
 
-####debug
-Type: `Boolean` Default: `false`
-
-Display debbuging information during execution. This option can also be set by running the task with `--debug`.
-
 ####extensions
 Type: `String` Default: `false`
 
@@ -71,22 +66,27 @@ A comma separated list of patterns to ignore files and directories. This option 
 Type: `string` Default: `false`
 
 Type of report output: "full", "xml", "checkstyle", "csv", "emacs", "source", "summary", "svnblame" or "gitblame"
-(the "full" report is printed by default)
+(the "full" report is printed by default). This option can also be set by running the task with `--report=<report>`.
 
 ####reportFile
 Type: `string` Default: `false`
 
-Log report to the file. This option can also be set by running the task with `--report-file`.
+Log report to the file. This option can also be set by running the task with `--report-file=<report file>`.
 
 ####severity
 Type: `Integer` Default: `false`
 
 The minimum severity required to display an error or warning. This option can also be set by running the task with `--severity=<severity>`.
 
+####errorSeverity
+Type: `Integer` Default: `false`
+
+The minimum severity required to display an error. This option can also be set by running the task with `--error-severity=<severity>`.
+
 ####warningSeverity
 Type: `Integer` Default: `false`
 
-The minimum severity required to display awarning. This option can also be set by running the task with `--severity-warning=<severity>`.
+The minimum severity required to display a warning. This option can also be set by running the task with `--warning-severity=<severity>`.
 
 ####standard
 Type: `String`  Default: `false`
